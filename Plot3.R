@@ -36,6 +36,7 @@ f$Time <- strptime(paste(f$Date,f$Time), format="%d/%m/%Y %H:%M:%S")
 f$Date <- as.Date(f$Date, format="%d/%m/%Y")
 
 # calling the basic plot functions
+plot(f$Time,f$Sub_metering_1,type="n",xlab="",ylab="Energy sub metering")
 with(f,lines(Time,as.numeric(as.character(Sub_metering_1))))
 with(f,lines(Time,as.numeric(as.character(Sub_metering_2)),col="red"))
 with(f,lines(Time,as.numeric(as.character(Sub_metering_3)),col="blue"))
